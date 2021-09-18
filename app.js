@@ -1,5 +1,5 @@
 let btnTranslate = document.querySelector("#btn-translate");
-let txtInput = document.querySelector("#txt-input");
+let txtInput = document.querySelector("[name='ntxt-input']");
 
 console.log(btnTranslate);
 console.log(txtInput);
