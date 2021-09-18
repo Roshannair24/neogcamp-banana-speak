@@ -2,49 +2,37 @@ let btnTranslate = document.querySelector("#btn-translate");
 let txtInput = document.querySelector("[name='ntxt-input']");
 let outputDiv = document.querySelector("#output");
 
-outputDiv.innerText = "yo";
-
 console.log(btnTranslate);
 console.log(txtInput);
 
 console.log("yo");
 
+// var serverurl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+
+var serverurl = "https://api.funtranslations.com/translate/minion.json";
+
+function constructTranslateUrl(text) {
+  console.log("constructTranslateUrl");
+
+  console.log(serverurl + "?text=" + text);
+
+  return serverurl + "?text=" + text;
+}
+
 btnTranslate.addEventListener("click", function () {
   console.log("yo clicked");
   console.log("input " + txtInput.value);
 
-  outputDiv.innerText = "fgghh: " + txtInput.value;
-});
+  fetch(constructTranslateUrl(txtInput.value))
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("hhh");
 
-var url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+      console.log(data.contents.translated);
 
-const text1 = "i-am-ironman-new";
-const text2 = "i-am-batman-new";
-
-function counstructurl(text) {
-
-
-    console.log("constrictor: "+url + "?"+"text=" + text);
-
-  return "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json" + '?'+'text=' + text;
-}
-
-function dofetch(text) {
-  fetch(counstructurl(text))
-    .then(function (response) {
-      return response.json();
+      outputDiv.innerText = data.contents.translated;
     })
-    .then(function (json) {
-      console.log(json);
+    .catch(function (err) {
+      console.log("error: " + err);
     });
-}
-
-// dofetch(counstructurl(text1));
-
-
-
-
-
-
-
-
+});
