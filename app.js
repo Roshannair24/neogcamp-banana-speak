@@ -1,26 +1,13 @@
-let btn = document.querySelector(".btn");
-let textareayo = document.querySelector("#textarea");
-let translator = document.querySelector("[name='translator']");
-let textdiv = document.querySelector(".textdiv");
+let btnTranslate = document.querySelector("#btn-translate");
+let txtInput = document.querySelector("#txt-input");
 
-let value = null;
-let valuetranslator = null;
+console.log(btnTranslate);
+console.log(txtInput);
 
-btn.addEventListener("click", function () {
-  console.log("clicked");
+console.log("yo");
 
-  value = textareayo.value;
-  valuetranslator=translator.value;
-
-
-  console.log("clicked " + value);
-  console.log("clicked value translator " + valuetranslator);
-
-
-
-  textdiv.style.innerHTML("<h1>hyhy</h1>");
+btnTranslate.addEventListener("click", function () {
+  console.log("yo clicked");
+  console.log("input " + txtInput.value);
 
 });
-
-
-
