@@ -35,7 +35,7 @@ h1 {
 }
 
 .textdivHolder {
-  height: 33vh;
+  height: 32vh;
 
   width: 100%;
 
@@ -108,7 +108,7 @@ h1 {
 .about{
 background-color: #374151;
 border-radius: 20px;
-    padding: 0.05rem;
+    padding: 0.01rem;
 }
 
 .about p{
