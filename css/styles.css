@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@400;700&display=swap");
+
+:root {
+  /* --main-text-bg-color: #fbdb5f; */
+  --main-text-bg-color: #faedba;
+  --main-button-bg-color: #fbdb5f;
+
+  --light-text-bg-color: #fbdb5f;
+  --light-button-bg-color: #ffee1e;
+
+  --dark-grey: #374151;
+  --off-white: #f3f4f6;
+}
+
+body {
+  box-sizing: border-box;
+
+  background-image: url(/images/ex5.jpg);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  font-family: "Gluten", cursive;
+  text-align: center;
+  color: var(--dark-grey);
+}
+
+::placeholder {
+  color: var(--dark-grey);
+  font-family: "Gluten", cursive;
+
+  font-weight: 300;
+}
+
+.textdivHolder {
+  height: 33vh;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.tArea {
+  width: 30rem;
+  height: 10rem;
+  border: 2px solid #d8b62e;
+  border-radius: 10px;
+  outline: none;
+  background-color: var(--main-text-bg-color);
+  font-family: "Gluten", cursive;
+}
+
+#txt-input:hover {
+  border-color: var(--main-text-bg-color);
+
+  transition: all 0.5s ease;
+
+  box-shadow: 0px 0px 5px var(--dark-grey);
+}
+
+.buttonDivHolder {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.buttonDivHolder #btn-translate {
+  height: 2rem;
+  width: 10rem;
+
+  border-radius: 20px;
+
+  border-style: none;
+  background-color: var(--main-button-bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-grey);
+}
+
+.buttonDivHolder #btn-translate:hover {
+  border-color: var(--main-text-bg-color);
+
+  transition: all 0.5s ease;
+
+  background-color: var(--light-button-bg-color);
+
+  box-shadow: 0px 0px 10px var(--main-text-bg-color);
+}
+
+.buttonDivHolder #btn-translate p {
+  font-family: "Gluten", cursive;
+
+  font-weight: 700;
+}
+
+
+
+.about{
+background-color: #374151;
+border-radius: 20px;
+    padding: 0.05rem;
+}
+
+.about p{
+    font-family: "Gluten", cursive;
+    text-align: center;
+    color: var(--off-white);
+
+    /* padding: 0.1rem; */
+}

@@ -28,6 +28,10 @@ btnTranslate.addEventListener("click", function () {
     .then((data) => {
       console.log("hhh");
 
+      console.log(data);
+
+      console.log("hhh");
+
       console.log(data.contents.translated);
 
       outputDiv.innerText = data.contents.translated;
